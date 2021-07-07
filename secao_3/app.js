@@ -24,3 +24,9 @@ posDecremento = posDecremento--; //pos decremento - o valor so mostrara a decrem
 
 let preDecremento = 2;
 preDecremento = ++preDecremento; //pre decremento - o valor mostrara a decrementação na hora, pois ele foi pre decrementado
+
+//operadores de comparação
+//operadores relacionais sao >, <, >=, <=
+//operadores de igualdade sao ==, ===, !=, !==
+
+//operadores lógicos sao !(não), ||, &&
