@@ -1,10 +1,13 @@
-let nota1, nota2, nota3, nota4;
+let corredor1, corredor2, corredor3;
 
-nota1 = 7
-nota2 = 8;
-nota3 = 6;
-nota4 = 10;
+corredor1 = 6;
+corredor2 = 7;
+corredor3 = 5;
 
-media = (nota1 + nota2 + nota3 + nota4) / 4;
-
-console.log(media);
+if(corredor1 < corredor2 && corredor1 < corredor3){
+    console.log("Corredor 1 foi o vencedor");
+}else if(corredor2 < corredor1 && corredor2 < corredor3){
+    console.log("Corredor 2 foi o vencedor");
+}else{
+    console.log("Corredor 3 foi o vencedor");
+}
