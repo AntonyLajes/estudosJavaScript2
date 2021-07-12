@@ -1,10 +1,11 @@
+let total = 0;
+
 for(let numProduto = 1; numProduto <= 50; numProduto++){
     let preco = parseFloat(prompt('Digite o preço do produto:'));
-    let total = 0;
 
     if(preco == 0){
         numProduto--;
-        console.log(numProduto + ' - R$ ' + total)
+        console.log('Numero de itens: ' + numProduto + ' /// Total:' + ' - R$ ' + total)
 
         break;
     }
