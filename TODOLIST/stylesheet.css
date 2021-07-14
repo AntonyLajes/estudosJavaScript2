@@ -71,6 +71,7 @@
     border-radius: 10px;
     padding-left: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -93,6 +94,7 @@ p {
     border-radius: 10px;
     margin-left: 10px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .botao_del_todos {
@@ -106,6 +108,7 @@ p {
     margin-left: 35px;
     font-size: 20px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .botao_del{
@@ -115,6 +118,7 @@ p {
     margin: 5px;
     padding: 2px;
     color: white;
+    cursor: pointer;
 }
 
 /* Paletas */ 
