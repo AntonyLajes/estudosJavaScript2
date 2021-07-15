@@ -18,14 +18,32 @@ function exibeFilmes(){
     setTimeout(criaElementosUi, 2000);
 }
 
-function adicionaFilme(filme, callback){
-    console.log(filme)
-    setTimeout(() => {
-        filmes.push(filme);
-        callback();
-    }, 3000);
-    
-    console.log(filmes);
+function adicionaFilme(filme){
+    const promessa = (resolve, reject) => {
+        console.log(filme)
+        setTimeout(() => {
+            if(filme.nome === ""){
+                reject(new Error("Nome inválido"));
+            }else{
+                filmes.push(filme);
+                resolve();
+            }
+        }, 3000);
+    }
+    return new Promise(promessa);
 }
 
-adicionaFilme({nome: "Codigo daVinci", genero: "Suspense/Drama"}, exibeFilmes);
+adicionaFilme({nome: "Codigo daVinci", genero: "Suspense/Drama"})
+    .then(() => {
+        return adicionaFilme({nome: "Exterminador do Futuro 1", genero: "Suspense/Ação"})
+    })
+    .then(() => {
+        return adicionaFilme({nome: "", genero: "Suspense/Ação"})
+    })
+    .then(() => {
+        return adicionaFilme({nome: "Exterminador do Futuro 3", genero: "Suspense/Ação"})
+    })
+    .then(exibeFilmes)
+    .catch((erro) => {
+        console.error(erro);
+    })

@@ -11,6 +11,7 @@ setTimeout(console.log, 2000, "Manuel");
 console.log("Silva");
 */
 
+
 function exibeNome(nome){
     //criando uma promise
     const promise = (resolve, rejected) => {
