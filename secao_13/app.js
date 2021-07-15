@@ -11,14 +11,29 @@ setTimeout(console.log, 2000, "Manuel");
 console.log("Silva");
 */
 
-function exibeNome(nome, callback){
-    setTimeout(() => {
-        console.log(nome);
-        callback();
-    }, 1500)
+function exibeNome(nome){
+    //criando uma promise
+    const promise = (resolve, rejected) => {
+        setTimeout(() => {
+            resolve(nome);
+        }, 1500)
+    }
+    return new Promise(promise);
+}
+
+function exibeSobrenome(){
+    console.log("Silva");
 }
 
 console.log("Olá, ");
-exibeNome("Manuel", function(){
-    console.log("Silva");
-})
+exibeNome("Manuel")
+    .then((resposta) => {
+        console.log(resposta);
+    })
+    .then(exibeSobrenome)
+    .then(() => {
+        console.log("Tudo bem?");
+    })
+    .then(() => {
+        console.log("Quantos anos você tem?");
+    })
