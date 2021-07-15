@@ -17,6 +17,7 @@ console.log(botaoCadastra);
 console.log(paleta1);
 console.log(paleta2);
 console.log(paleta3);
+*/
 
 //PERCORRER ELEMENTOS
 //parentNode - obtem nó que está a um nivel acima na hierarquia da árvore DOM (pai)
@@ -54,15 +55,6 @@ console.log(paletasDiv);
 //INSERIR PROPRIEDADES EM ELEMENTOS
 //classList - mostra as classes de um elemento em um HTMLCollection
 paleta4.classList.add("paleta"); //adicionou classe ao elemento
-//REMOVER ELEMENTOS
-//removeChild - remove o elemento filho de um elemento
-paletasDiv.removeChild(paleta2) //remove o elemento paleta2 da paletas_div
-
-//remover todos os elementos filho de um elemento pai
-while(paletasDiv.firstElementChild){
-    paletasDiv.removeChild(paletasDiv.firstElementChild);
-}
-*/
 
 function cadastraAtividade(){
     if(input.value.length > 3){
